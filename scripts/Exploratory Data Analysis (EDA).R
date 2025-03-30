@@ -4,7 +4,7 @@ library(ggplot2)
 library(readr)
 
 # Load the cleaned dataset
-data_clean <- read_csv("Outputs/cleaned_online_retail.csv")
+data_clean <- read_csv("../data/cleaned_online_retail.csv")
 
 # Ensure InvoiceDate is in proper datetime format
 data_clean$InvoiceDate <- as.POSIXct(data_clean$InvoiceDate)
