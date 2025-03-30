@@ -4,7 +4,7 @@ library(dplyr)
 library(readr)
 
 # Load cleaned dataset
-data_clean <- read_csv("Outputs/cleaned_online_retail.csv")
+data_clean <- read_csv("../data/cleaned_online_retail.csv")
 
 # --- HYPOTHESIS 1: UK vs Non-UK Order Value ---
 data_clean <- data_clean %>%
@@ -18,7 +18,7 @@ uk_orders <- invoice_data %>% filter(Country == "United Kingdom") %>% pull(Order
 non_uk_orders <- invoice_data %>% filter(Country != "United Kingdom") %>% pull(OrderValue)
 
 # --- HYPOTHESIS 2: Spending by Return vs No Return Customers ---
-raw_data <- read_csv("Outputs/online_retail_II.csv")
+raw_data <- read_csv("../data/cleaned_online_retail.csv")
 
 return_customers <- raw_data %>%
   filter(Quantity < 0, !is.na(`Customer ID`)) %>%
