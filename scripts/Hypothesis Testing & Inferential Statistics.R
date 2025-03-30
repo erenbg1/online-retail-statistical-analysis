@@ -31,7 +31,7 @@ test1 <- t.test(uk_orders, non_uk_orders)
 # -------------------------------
 
 # Load original dataset (for identifying return behavior)
-raw_data <- read_csv("Outputs/online_retail_II.csv")
+raw_data <- read_csv("../data/cleaned_online_retail.csv")
 
 # Identify customers who made returns (Quantity < 0)
 return_customers <- raw_data %>%
