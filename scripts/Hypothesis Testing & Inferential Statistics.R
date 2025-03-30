@@ -4,7 +4,7 @@ library(readr)
 library(ggplot2)
 
 # Load cleaned dataset
-data_clean <- read_csv("Outputs/cleaned_online_retail.csv")
+data_clean <- read_csv("../data/cleaned_online_retail.csv")
 
 # -------------------------------
 # HYPOTHESIS 1: UK vs Non-UK Order Value
